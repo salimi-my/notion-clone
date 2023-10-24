@@ -12,9 +12,10 @@ import {
 } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import Item from '@/components/main/item';
+import { Item } from '@/components/main/item';
 import { api } from '@/convex/_generated/api';
 import UserItem from '@/components/main/user-item';
+import { DocumentList } from '@/components/main/document-list';
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -138,7 +139,7 @@ const Navigation = () => {
           <Item onClick={handleCreate} label='New page' icon={PlusCircle} />
         </div>
         <div className='mt-4'>
-          <p>Documents</p>
+          <DocumentList />
         </div>
         <div
           onMouseDown={handleMouseDown}
