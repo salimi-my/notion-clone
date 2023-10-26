@@ -5,6 +5,7 @@ import { MenuIcon } from 'lucide-react';
 import { useParams } from 'next/navigation';
 
 import { api } from '@/convex/_generated/api';
+import { Title } from '@/components/main/title';
 import { Id } from '@/convex/_generated/dataModel';
 
 interface NavbarProps {
@@ -20,7 +21,11 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
   });
 
   if (document === undefined) {
-    return <p>Loading...</p>;
+    return (
+      <nav className='bg-background dark:bg-[#1F1F1F] px-3 py-2 w-full flex items-center justify-between'>
+        <Title.Skeleton />
+      </nav>
+    );
   }
 
   if (document === null) {
@@ -37,7 +42,9 @@ export const Navbar = ({ isCollapsed, onResetWidth }: NavbarProps) => {
             className='h-6 w-6 text-muted-foreground'
           />
         )}
-        <div className='flex items-center justify-between w-full'>Navbar</div>
+        <div className='flex items-center justify-between w-full'>
+          <Title initialData={document} />
+        </div>
       </nav>
     </>
   );
