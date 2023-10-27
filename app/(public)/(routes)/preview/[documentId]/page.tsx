@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react';
 import dynamic from 'next/dynamic';
-import { useMutation, useQuery } from 'convex/react';
+import { useQuery } from 'convex/react';
 
 import { Cover } from '@/components/cover';
 import { api } from '@/convex/_generated/api';
@@ -25,15 +25,6 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
   const document = useQuery(api.documents.getById, {
     documentId: params.documentId
   });
-
-  const update = useMutation(api.documents.update);
-
-  const onChange = (content: string) => {
-    update({
-      id: params.documentId,
-      content
-    });
-  };
 
   if (document === undefined) {
     return (
@@ -60,11 +51,7 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
       <Cover preview url={document.coverImage} />
       <div className='md:max-w-3xl lg:max-w-4xl mx-auto'>
         <Toolbar preview initialData={document} />
-        <Editor
-          editable={false}
-          onChange={onChange}
-          initialContent={document.content}
-        />
+        <Editor editable={false} initialContent={document.content} />
       </div>
     </div>
   );
