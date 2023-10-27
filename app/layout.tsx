@@ -12,6 +12,13 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.APP_URL
+      ? `${process.env.APP_URL}`
+      : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : `http://localhost:${process.env.PORT || 3000}`
+  ),
   title: 'Motion — Elevate Productivity: Tasks, Projects, Notes.',
   description:
     'Motion is a freemium productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.'
