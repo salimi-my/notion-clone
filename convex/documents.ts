@@ -1,7 +1,8 @@
 import { v } from 'convex/values';
 
+import { api } from './_generated/api';
 import { Doc, Id } from './_generated/dataModel';
-import { mutation, query } from './_generated/server';
+import { httpAction, mutation, query } from './_generated/server';
 
 export const archive = mutation({
   args: { id: v.id('documents') },
@@ -352,4 +353,28 @@ export const removeCoverImage = mutation({
 
     return document;
   }
+});
+
+export const getByIdAction = httpAction(async ({ runQuery }, request) => {
+  const url = new URL(request.url);
+  const documentId: Id<'documents'> =
+    (url.searchParams.get('documentId') as Id<'documents'>) ??
+    (request.headers.get('documentId') as Id<'documents'>) ??
+    null;
+  if (documentId === null) {
+    return new Response('Did not specify documentId as query param or header', {
+      status: 400
+    });
+  }
+
+  const document = await runQuery(api.documents.getById, {
+    documentId: documentId
+  });
+
+  return new Response(JSON.stringify(document), {
+    headers: {
+      'content-type': 'application/json'
+    },
+    status: 200
+  });
 });
