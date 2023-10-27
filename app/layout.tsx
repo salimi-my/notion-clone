@@ -21,7 +21,19 @@ export const metadata: Metadata = {
   ),
   title: 'Motion — Elevate Productivity: Tasks, Projects, Notes.',
   description:
-    'Motion is a freemium productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.'
+    'Motion is a freemium productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.',
+  openGraph: {
+    url: '/',
+    title: 'Motion — Elevate Productivity: Tasks, Projects, Notes.',
+    description:
+      'Motion is a freemium productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Motion — Elevate Productivity: Tasks, Projects, Notes.',
+    description:
+      'Motion is a freemium productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.'
+  }
 };
 
 export default function RootLayout({
