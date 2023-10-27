@@ -1,8 +1,8 @@
 import { toast } from 'sonner';
 import { useMutation } from 'convex/react';
 import { useMediaQuery } from 'usehooks-ts';
-import { useParams, usePathname } from 'next/navigation';
 import { useRef, ElementRef, useState, useEffect } from 'react';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import {
   ChevronsLeft,
   MenuIcon,
@@ -29,6 +29,7 @@ import {
 } from '@/components/ui/popover';
 
 const Navigation = () => {
+  const router = useRouter();
   const search = useSearch();
   const settings = useSettings();
   const pathname = usePathname();
@@ -117,7 +118,9 @@ const Navigation = () => {
   };
 
   const handleCreate = () => {
-    const promise = create({ title: 'Untitled' });
+    const promise = create({ title: 'Untitled' }).then((documentId) =>
+      router.push(`/documents/${documentId}`)
+    );
 
     toast.promise(promise, {
       loading: 'Creating a new note...',
