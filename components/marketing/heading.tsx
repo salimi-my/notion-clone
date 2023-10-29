@@ -18,10 +18,10 @@ const Heading = () => {
         Your
         <Image
           src='/wikis-icon.webp'
-          height={57}
-          width={45}
+          height={56}
+          width={44}
           alt='idea'
-          className='inline mx-4'
+          className='inline mx-4 w-7 h-8 md:w-11 md:h-14'
         />
         <span className='underline underline-offset-[0.075em] decoration-[0.05em]'>
           ideas
@@ -29,10 +29,10 @@ const Heading = () => {
         ,
         <Image
           src='/docs-icon.webp'
-          height={57}
-          width={43}
+          height={56}
+          width={44}
           alt='idea'
-          className='inline mx-4'
+          className='inline mx-4 w-7 h-8 md:w-11 md:h-14'
         />
         <span className='underline underline-offset-[0.075em] decoration-[0.05em]'>
           docs
@@ -40,10 +40,10 @@ const Heading = () => {
         , &{' '}
         <Image
           src='/projects-icon.webp'
-          height={57}
-          width={57}
+          height={56}
+          width={56}
           alt='idea'
-          className='inline mx-4'
+          className='inline mx-4 w-8 h-8 md:w-14 md:h-14'
         />
         <span className='underline underline-offset-[0.075em] decoration-[0.05em]'>
           plans
