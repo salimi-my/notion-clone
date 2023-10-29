@@ -80,13 +80,13 @@ const Footer = () => {
               Docs
             </li>
             <li className='pb-1 text-zinc-500 dark:text-zinc-300 hover:text-sky-500 dark:hover:text-sky-600 hover:underline hover:cursor-pointer'>
-              Plans
+              Planing
             </li>
           </ul>
           <ul className='mb-8'>
             <li className='pb-2 font-bold'>Download</li>
             <li className='pb-1 text-zinc-500 dark:text-zinc-300 hover:text-sky-500 dark:hover:text-sky-600 hover:underline hover:cursor-pointer'>
-              iOS & ANdroid
+              iOS & Android
             </li>
             <li className='pb-1 text-zinc-500 dark:text-zinc-300 hover:text-sky-500 dark:hover:text-sky-600 hover:underline hover:cursor-pointer'>
               Mac & Windows
