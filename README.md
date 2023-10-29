@@ -1,8 +1,8 @@
-# [URL Shortener](https://url.salimi.my) &middot; [![Author Salimi](https://img.shields.io/badge/Author-Salimi-%3C%3E)](https://www.linkedin.com/in/mohamad-salimi/)
+# [Motion](https://motion.salimi.my) &middot; [![Author Salimi](https://img.shields.io/badge/Author-Salimi-%3C%3E)](https://www.linkedin.com/in/mohamad-salimi/)
 
 This is a Notion clone app created using Next.js for educational purposes. Motion is a productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.
 
-## Simple URL shortener tool
+## Notion Clone
 
 - Real time database
 - Light / dark / system mode
