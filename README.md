@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [URL Shortener](https://url.salimi.my) &middot; [![Author Salimi](https://img.shields.io/badge/Author-Salimi-%3C%3E)](https://www.linkedin.com/in/mohamad-salimi/)
 
-## Getting Started
+This is a Notion clone app created using Next.js for educational purposes. Motion is a productivity and note-taking web application. It offers organizational tools including task management, project tracking, to-do lists, and bookmarking.
 
-First, run the development server:
+## Simple URL shortener tool
+
+- Real time database
+- Light / dark / system mode
+- Authentication using Clerk
+- Convex for database
+- Edgestore for image upload
+- Zustand for state management
+- Notion like editor using BlockNote
+- Hosted in Vercel
+
+## Tech/framework used
+
+- Next.js 13 App Dir
+- Shadcn/ui
+- Clerk
+- Tailwind CSS
+- TypeScript
+- Convex
+- Edgestore
+- BlockNote
+- Zustand
+- Vercel
+
+## Starting the project
+
+Open the [.env.example](/.env.example) and fill in your Convex configuration, Edgestore configuration & Clerk Auth Configurations then save it as .env.local the run the following command:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx convex dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app is hosted on Vercel. [Click here](https://motion.salimi.my) to visit.
+<br>
+Direct link: `https://motion.salimi.my`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshots
 
-## Learn More
+#### Landing page
 
-To learn more about Next.js, take a look at the following resources:
+![Landing page](/screenshots/screenshot-1.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Sign in
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Sign in](/screenshots/screenshot-2.png)
 
-## Deploy on Vercel
+#### Editor
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Editor](/screenshots/screenshot-3.png)
