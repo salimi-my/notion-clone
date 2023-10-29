@@ -8,6 +8,7 @@ const MarketingPage = () => {
       <div className='flex flex-col items-center justify-center md:justify-start text-center gap-y-8 flex-1 px-6 pb-10'>
         <Heading />
         <Heroes />
+        <hr className='w-full dark:border-zinc-600' />
       </div>
       <Footer />
     </div>
